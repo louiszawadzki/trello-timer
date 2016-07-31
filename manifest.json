@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Trello Timer",
+  "description": "This extension helps you keeping track of how much time you spend estimating each Trello Ticket",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://trello.com/b/*"
+      ],
+      "js": [
+        "moment.js",
+        "main.js"
+      ]
+    }
+  ]
+}
